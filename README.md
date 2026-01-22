@@ -2,10 +2,9 @@
 [![Deploy to GitHub Pages](https://github.com/UserDevtec/dashboard-lab/actions/workflows/deploy.yml/badge.svg)](https://github.com/UserDevtec/dashboard-lab/actions/workflows/deploy.yml)
 
 Dashboard Lab is een overzichtspagina voor GitHub Pages labs met status badges, snelle links en ruimte voor visuals.
+Live demo: https://userdevtec.github.io/dashboard-lab
 
 <img width="1861" height="1029" alt="image" src="https://github.com/user-attachments/assets/01db2bb9-6cb6-47c1-ba50-ed4154e5c817" />
-
-Live demo: https://userdevtec.github.io/dashboard-lab
 
 ## Features
 - Cards met status badges per lab.
