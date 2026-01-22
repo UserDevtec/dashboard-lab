@@ -123,7 +123,7 @@ function App() {
             }}
           >
             <p className="stat-label">Help</p>
-            <h3>Hulp nodig?</h3>
+            <h3>Hulp nodig of een idee?</h3>
             <div className="help-contact">
               <a className="help-contact-item" href="mailto:jonathan.vandergouwe@croonwolterendros.nl">
                 <span className="help-icon" aria-hidden="true">
