@@ -49,6 +49,8 @@
   padding: 12px 20px;
   font-weight: 600;
   font-size: 0.95rem;
+  font-family: inherit;
+  line-height: 1;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: inline-flex;
@@ -296,12 +298,17 @@
   font-size: 0.85rem;
 }
 
-.primary[disabled],
+.primary[disabled] {
+  cursor: not-allowed;
+  opacity: 1;
+}
+
 .ghost[disabled] {
   cursor: not-allowed;
   opacity: 0.65;
   box-shadow: none;
 }
+
 
 @keyframes fadeUp {
   from {

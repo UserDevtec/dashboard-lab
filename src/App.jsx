@@ -144,7 +144,7 @@ function App() {
                       Open Weblab
                     </a>
                   ) : (
-                    <button className="ghost small" type="button" disabled>
+                    <button className="primary small" type="button" disabled>
                       Binnenkort
                     </button>
                   )}
