@@ -267,6 +267,26 @@
   box-shadow: 0 0 0 3px rgba(244, 178, 66, 0.2);
 }
 
+.status-pill.status-planned {
+  background: rgba(244, 178, 66, 0.18);
+  color: #5a3d12;
+}
+
+.status-pill.status-planned .status-dot {
+  background: #f4b242;
+  box-shadow: 0 0 0 3px rgba(244, 178, 66, 0.2);
+}
+
+.status-pill.status-onhold {
+  background: rgba(140, 148, 166, 0.2);
+  color: #3e4658;
+}
+
+.status-pill.status-onhold .status-dot {
+  background: #8c94a6;
+  box-shadow: 0 0 0 3px rgba(140, 148, 166, 0.26);
+}
+
 .lab-desc {
   margin: 0;
   color: #3c4453;
@@ -301,6 +321,12 @@
 .primary[disabled] {
   cursor: not-allowed;
   opacity: 1;
+}
+
+.primary.primary-disabled-planned[disabled] {
+  background: #f4b242;
+  color: #5a3d12;
+  box-shadow: none;
 }
 
 .ghost[disabled] {

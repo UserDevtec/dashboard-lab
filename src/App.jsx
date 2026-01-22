@@ -2,7 +2,7 @@ import { useState } from 'react';
 import eisencheckImage from './assets/eisencheck.png';
 import afwijkingenImage from './assets/afwijkingen.png';
 import turtleImage from './assets/turtle.png';
-import logoImage from './assets/logo_tbi.png';
+import logoImage from './assets/logo_tbi_en_tekst.png';
 import ifcViewerImage from './assets/ifcviewer.png';
 import './App.css';
 
@@ -58,6 +58,38 @@ const labs = [
     accent: '#630d80',
     status: 'Bezig',
     statusTone: 'planning',
+  },
+  {
+    name: 'EisenAnalyse Lab',
+    description: 'Analyse van eisen met heldere feedback en actiestappen.',
+    image: logoImage,
+    accent: '#c1e62e',
+    status: 'Gepland',
+    statusTone: 'onhold',
+  },
+  {
+    name: 'LessonsLearned Lab',
+    description: 'Lessons learned vastleggen en delen met het team.',
+    image: logoImage,
+    accent: '#630d80',
+    status: 'On hold',
+    statusTone: 'onhold',
+  },
+  {
+    name: 'VerificatiePlan Lab',
+    description: 'Verificatieplan opstellen en keuzes vastleggen.',
+    image: logoImage,
+    accent: '#c1e62e',
+    status: 'On hold',
+    statusTone: 'onhold',
+  },
+  {
+    name: 'TurtleEditor Lab',
+    description: 'Editor voor Turtle-bestanden met directe validatie.',
+    image: logoImage,
+    accent: '#630d80',
+    status: 'On hold',
+    statusTone: 'onhold',
   },
 ];
 
@@ -146,8 +178,12 @@ function App() {
                       Open Weblab
                     </a>
                   ) : (
-                    <button className="primary small" type="button" disabled>
-                      Binnenkort
+                    <button
+                      className={`primary small ${lab.statusTone === 'planned' ? 'primary-disabled-planned' : ''}`}
+                      type="button"
+                      disabled
+                    >
+                      {lab.statusTone === 'planned' ? 'Gepland' : lab.statusTone === 'onhold' ? 'Onbekend' : 'Binnenkort'}
                     </button>
                   )}
                 </div>
