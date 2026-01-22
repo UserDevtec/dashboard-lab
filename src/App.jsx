@@ -59,7 +59,7 @@ function App() {
     <main className="app">
       <section className="hero">
         <div>
-          <p className="eyebrow">GitHub Labs</p>
+          <p className="eyebrow">Dashboard labs</p>
           <h1>Lab dashboard overzicht</h1>
           <p className="subtitle">
             Snelle status-checks, badges en live links naar je GitHub Pages labs.
@@ -80,27 +80,9 @@ function App() {
         </div>
       </section>
 
-      <section className="panel stats">
-        <div>
-          <h2>Status in een oogopslag</h2>
-          <p className="meta">
-            {labs.length} labs gekoppeld · GitHub Pages deployments
-          </p>
-        </div>
-        <div className="stats-grid">
-          {stats.map((stat) => (
-            <div className="stat-card" key={stat.label}>
-              <p className="stat-label">{stat.label}</p>
-              <p className="stat-value">{stat.value}</p>
-              <p className="stat-note">{stat.note}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section id="labs" className="panel">
         <div className="panel-header">
-          <h2>Lab websites</h2>
+          <h2>CW&D Lab Apps</h2>
           <div className="legend">
             <span className="legend-dot"></span>
             <span>GitHub Pages</span>
