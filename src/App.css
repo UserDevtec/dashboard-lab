@@ -305,3 +305,130 @@
     flex-wrap: wrap;
   }
 }
+
+.help-fab-wrap {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 70;
+}
+
+.help-fab {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: #111318;
+  color: #f7f3ee;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 16px 30px rgba(17, 19, 24, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.help-fab-label {
+  background: #ffffff;
+  color: #111318;
+  border: 1px solid #d7dbe6;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 12px 24px rgba(31, 39, 54, 0.12);
+  opacity: 0;
+  transform: translateX(-8px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+
+.help-fab-wrap.open .help-fab-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.help-fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(17, 19, 24, 0.28);
+}
+
+.help-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(245, 243, 239, 0.38);
+  backdrop-filter: blur(2px);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.help-card {
+  width: min(470px, 100%);
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid #e1e4ee;
+  box-shadow: 0 20px 40px rgba(31, 39, 54, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.help-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.help-card .stat-label,
+.help-card h3 {
+  text-align: center;
+}
+
+.help-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.help-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e1e4ee;
+  background: #ffffff;
+  font-size: 0.9rem;
+  color: #2a3241;
+  box-shadow: 0 10px 20px rgba(31, 39, 54, 0.06);
+}
+
+.help-contact-item:hover {
+  border-color: #c8cbd6;
+}
+
+.help-icon {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #111318;
+  color: #f7f3ee;
+}
+
+.help-contact-text {
+  text-align: left;
+}
