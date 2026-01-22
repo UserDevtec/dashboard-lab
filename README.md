@@ -15,9 +15,3 @@ Live demo: https://userdevtec.github.io/dashboard-lab
 ## Gebruik
 1) Open het dashboard.
 2) Klik op een lab om de live site of repository te openen.
-
-## Ontwikkelen
-```bash
-npm install
-npm run dev
-```
