@@ -202,6 +202,10 @@
   box-shadow: 0 12px 26px rgba(17, 19, 24, 0.12);
 }
 
+.lab-image--planning {
+  filter: blur(6px);
+}
+
 .lab-body {
   padding: 18px;
   display: flex;
@@ -233,12 +237,32 @@
   gap: 6px;
 }
 
-.status-live-dot {
+.status-dot {
   width: 8px;
   height: 8px;
   border-radius: 999px;
+  background: #111318;
+  box-shadow: 0 0 0 3px rgba(17, 19, 24, 0.12);
+}
+
+.status-pill.status-live {
+  background: rgba(45, 191, 90, 0.12);
+  color: #1f3f2b;
+}
+
+.status-pill.status-live .status-dot {
   background: #2dbf5a;
   box-shadow: 0 0 0 3px rgba(45, 191, 90, 0.2);
+}
+
+.status-pill.status-planning {
+  background: rgba(244, 178, 66, 0.18);
+  color: #5a3d12;
+}
+
+.status-pill.status-planning .status-dot {
+  background: #f4b242;
+  box-shadow: 0 0 0 3px rgba(244, 178, 66, 0.2);
 }
 
 .lab-desc {
@@ -256,14 +280,6 @@
   color: #59637a;
 }
 
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #111318;
-  box-shadow: 0 0 0 4px rgba(17, 19, 24, 0.12);
-}
-
 .badge img {
   display: block;
   height: 20px;
@@ -278,6 +294,13 @@
 .small {
   padding: 8px 14px;
   font-size: 0.85rem;
+}
+
+.primary[disabled],
+.ghost[disabled] {
+  cursor: not-allowed;
+  opacity: 0.65;
+  box-shadow: none;
 }
 
 @keyframes fadeUp {

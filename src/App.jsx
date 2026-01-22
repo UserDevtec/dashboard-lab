@@ -2,6 +2,7 @@ import { useState } from 'react';
 import eisencheckImage from './assets/eisencheck.png';
 import afwijkingenImage from './assets/afwijkingen.png';
 import turtleImage from './assets/turtle.png';
+import logoImage from './assets/logo_tbi.png';
 import './App.css';
 
 const labs = [
@@ -11,6 +12,8 @@ const labs = [
     siteUrl: 'https://userdevtec.github.io/eisencheck-lab',
     image: eisencheckImage,
     accent: '#c1e62e',
+    status: 'Live',
+    statusTone: 'live',
   },
   {
     name: 'Afwijkingen Lab',
@@ -18,6 +21,8 @@ const labs = [
     siteUrl: 'https://userdevtec.github.io/afwijkingen-lab',
     image: afwijkingenImage,
     accent: '#630d80',
+    status: 'Live',
+    statusTone: 'live',
   },
   {
     name: 'Turtle Lab',
@@ -25,23 +30,52 @@ const labs = [
     siteUrl: 'https://userdevtec.github.io/turtle-lab',
     image: turtleImage,
     accent: '#c1e62e',
+    status: 'Live',
+    statusTone: 'live',
+  },
+  {
+    name: 'IfcViewer Lab',
+    description: 'IfcViewer tooling voor modelinspectie en snelle checks.',
+    image: logoImage,
+    accent: '#630d80',
+    status: 'Bezig',
+    statusTone: 'planning',
+  },
+  {
+    name: 'Smart Lab',
+    description: 'Slimme workflows en dashboards voor interne tooling.',
+    image: logoImage,
+    accent: '#c1e62e',
+    status: 'Bezig',
+    statusTone: 'planning',
+  },
+  {
+    name: 'MDR Lab',
+    description: 'MDR-omgeving voor validatie en dataverwerking.',
+    image: logoImage,
+    accent: '#630d80',
+    status: 'Bezig',
+    statusTone: 'planning',
   },
 ];
+
+const liveLabs = labs.filter((lab) => lab.statusTone === 'live');
+const publicLabs = labs.filter((lab) => lab.siteUrl);
 
 const stats = [
   {
     label: 'Actieve labs',
-    value: labs.length,
+    value: liveLabs.length,
     note: 'Live op GitHub Pages',
   },
   {
     label: 'Deploy badge',
-    value: labs.length,
+    value: liveLabs.length,
     note: 'Realtime workflow status',
   },
   {
     label: 'Publieke links',
-    value: labs.length,
+    value: publicLabs.length,
     note: 'Direct openen vanaf hier',
   },
 ];
@@ -83,21 +117,37 @@ function App() {
           {labs.map((lab) => (
             <article className="lab-card" style={{ '--accent': lab.accent }} key={lab.name}>
               <div className="lab-media">
-                <img className="lab-image" src={lab.image} alt={lab.name} loading="lazy" />
+                <img
+                  className={`lab-image ${lab.siteUrl ? '' : 'lab-image--planning'}`}
+                  src={lab.image}
+                  alt={lab.name}
+                  loading="lazy"
+                />
               </div>
               <div className="lab-body">
                 <header className="lab-header">
                   <h3>{lab.name}</h3>
-                  <span className="status-pill">
-                    <span className="status-live-dot" aria-hidden="true"></span>
-                    Live
+                  <span className={`status-pill status-${lab.statusTone}`}>
+                    <span className="status-dot" aria-hidden="true"></span>
+                    {lab.status}
                   </span>
                 </header>
                 <p className="lab-desc">{lab.description}</p>
                 <div className="lab-actions">
-                  <a className="primary small" href={lab.siteUrl} target="_blank" rel="noreferrer">
-                    Open Weblab
-                  </a>
+                  {lab.siteUrl ? (
+                    <a
+                      className="primary small"
+                      href={lab.siteUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Open Weblab
+                    </a>
+                  ) : (
+                    <button className="ghost small" type="button" disabled>
+                      Binnenkort
+                    </button>
+                  )}
                 </div>
               </div>
             </article>
