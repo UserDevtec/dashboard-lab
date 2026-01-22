@@ -4,7 +4,7 @@
 Dashboard Lab is een overzichtspagina voor GitHub Pages labs met status badges, snelle links en ruimte voor visuals.
 Live demo: https://userdevtec.github.io/dashboard-lab
 
-<img width="1857" height="1027" alt="image" src="https://github.com/user-attachments/assets/71a976b7-7fdc-45f6-8060-07d6bc85f2ac" />
+<img width="1846" height="1026" alt="image" src="https://github.com/user-attachments/assets/e451eeb5-5950-457b-b89e-69236759812f" />
 
 ## Features
 - Cards met status badges per lab.
