@@ -3,6 +3,7 @@ import eisencheckImage from './assets/eisencheck.png';
 import afwijkingenImage from './assets/afwijkingen.png';
 import turtleImage from './assets/turtle.png';
 import logoImage from './assets/logo_tbi.png';
+import ifcViewerImage from './assets/ifcviewer.png';
 import './App.css';
 
 const labs = [
@@ -36,10 +37,11 @@ const labs = [
   {
     name: 'IfcViewer Lab',
     description: 'IfcViewer tooling voor modelinspectie en snelle checks.',
-    image: logoImage,
+    siteUrl: 'https://userdevtec.github.io/ifc-lab',
+    image: ifcViewerImage,
     accent: '#630d80',
-    status: 'Bezig',
-    statusTone: 'planning',
+    status: 'Live',
+    statusTone: 'live',
   },
   {
     name: 'Smart Lab',
