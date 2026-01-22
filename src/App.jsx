@@ -5,34 +5,22 @@ const labs = [
     name: 'Eisencheck Lab',
     description: 'Controleer eisen en publiceer direct via GitHub Pages.',
     siteUrl: 'https://userdevtec.github.io/eisencheck-lab',
-    repoUrl: 'https://github.com/UserDevtec/eisencheck-lab',
-    badgeUrl:
-      'https://github.com/UserDevtec/eisencheck-lab/actions/workflows/deploy.yml/badge.svg',
-    workflowUrl:
-      'https://github.com/UserDevtec/eisencheck-lab/actions/workflows/deploy.yml',
-    accent: '#caa46c',
+    image: '/src/assets/eisencheck.png',
+    accent: '#c1e62e',
   },
   {
     name: 'Afwijkingen Lab',
     description: 'Registreer afwijkingen en check de deployment status direct.',
     siteUrl: 'https://userdevtec.github.io/afwijkingen-lab',
-    repoUrl: 'https://github.com/UserDevtec/afwijkingen-lab',
-    badgeUrl:
-      'https://github.com/UserDevtec/afwijkingen-lab/actions/workflows/deploy.yml/badge.svg',
-    workflowUrl:
-      'https://github.com/UserDevtec/afwijkingen-lab/actions/workflows/deploy.yml',
-    accent: '#6da6b5',
+    image: '/src/assets/afwijkingen.png',
+    accent: '#630d80',
   },
   {
     name: 'Turtle Lab',
     description: 'Turtle tooling met dezelfde UI-stijl als dit dashboard.',
     siteUrl: 'https://userdevtec.github.io/turtle-lab',
-    repoUrl: 'https://github.com/UserDevtec/turtle-lab',
-    badgeUrl:
-      'https://github.com/UserDevtec/turtle-lab/actions/workflows/deploy.yml/badge.svg',
-    workflowUrl:
-      'https://github.com/UserDevtec/turtle-lab/actions/workflows/deploy.yml',
-    accent: '#9a7bc1',
+    image: '/src/assets/turtle.png',
+    accent: '#c1e62e',
   },
 ];
 
@@ -83,48 +71,26 @@ function App() {
       <section id="labs" className="panel">
         <div className="panel-header">
           <h2>CW&D Lab Apps</h2>
-          <div className="legend">
-            <span className="legend-dot"></span>
-            <span>GitHub Pages</span>
-          </div>
         </div>
 
         <div className="lab-grid">
           {labs.map((lab) => (
             <article className="lab-card" style={{ '--accent': lab.accent }} key={lab.name}>
               <div className="lab-media">
-                <div className="lab-media-placeholder">
-                  <span>Afbeelding hier</span>
-                </div>
+                <img className="lab-image" src={lab.image} alt={lab.name} loading="lazy" />
               </div>
               <div className="lab-body">
                 <header className="lab-header">
                   <h3>{lab.name}</h3>
-                  <span className="status-pill">Live</span>
+                  <span className="status-pill">
+                    <span className="status-live-dot" aria-hidden="true"></span>
+                    Live
+                  </span>
                 </header>
                 <p className="lab-desc">{lab.description}</p>
-                <div className="lab-status">
-                  <span className="status-dot"></span>
-                  <span>Deploy status</span>
-                  <a
-                    className="badge"
-                    href={lab.workflowUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img
-                      src={lab.badgeUrl}
-                      alt={`Deploy status ${lab.name}`}
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
                 <div className="lab-actions">
                   <a className="primary small" href={lab.siteUrl} target="_blank" rel="noreferrer">
-                    Open lab
-                  </a>
-                  <a className="ghost small" href={lab.repoUrl} target="_blank" rel="noreferrer">
-                    Repo
+                    Open Weblab
                   </a>
                 </div>
               </div>
