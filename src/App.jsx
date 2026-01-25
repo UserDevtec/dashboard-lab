@@ -91,6 +91,14 @@ const labs = [
     status: 'On hold',
     statusTone: 'onhold',
   },
+  {
+    name: 'Relatics Lab',
+    description: 'Relatics omgeving voor eisenbeheer en traceerbaarheid.',
+    image: logoImage,
+    accent: '#c1e62e',
+    status: 'On hold',
+    statusTone: 'onhold',
+  },
 ];
 
 const liveLabs = labs.filter((lab) => lab.statusTone === 'live');
