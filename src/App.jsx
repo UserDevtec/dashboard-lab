@@ -148,7 +148,7 @@ function App() {
           <p className="eyebrow">Dashboard labs</p>
           <h1>Lab dashboard overzicht</h1>
           <p className="subtitle">
-            Snelle status-checks, badges en live links naar je GitHub Pages labs.
+            Overzicht van CW&D Lab-apps en tools ter optimalisatie van processen en ter vermindering van bulk werkzaamheden.
           </p>
         </div>
         <div className="actions">
