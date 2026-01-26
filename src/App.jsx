@@ -84,6 +84,14 @@ const labs = [
     statusTone: 'onhold',
   },
   {
+    name: 'PR-Klemmen Lab',
+    description: 'Primaire klemmen overzicht voor primaire engineers.',
+    image: logoImage,
+    accent: '#630d80',
+    status: 'On hold',
+    statusTone: 'onhold',
+  },
+  {
     name: 'TurtleEditor Lab',
     description: 'Editor voor Turtle-bestanden met directe validatie.',
     image: logoImage,
