@@ -27,7 +27,7 @@ const labs = [
   },
   {
     name: 'Turtle Lab',
-    description: 'Turtle tooling met dezelfde UI-stijl als dit dashboard.',
+    description: 'Turtle tooling om RDF bestanden uit te kunnen pakken & exporteren.',
     siteUrl: 'https://userdevtec.github.io/turtle-lab',
     image: turtleImage,
     accent: '#c1e62e',
