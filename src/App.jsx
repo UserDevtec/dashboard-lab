@@ -107,6 +107,14 @@ const labs = [
     status: 'On hold',
     statusTone: 'onhold',
   },
+  {
+    name: 'Concurrent-Engineering Lab',
+    description: 'Samenwerken in sessies met gedeelde besluitvorming en acties.',
+    image: logoImage,
+    accent: '#630d80',
+    status: 'On hold',
+    statusTone: 'onhold',
+  },
 ];
 
 const liveLabs = labs.filter((lab) => lab.statusTone === 'live');
