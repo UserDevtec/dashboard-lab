@@ -8,8 +8,8 @@ import './App.css';
 
 const labs = [
   {
-    name: 'Eisencheck Lab',
-    description: 'Controleer eisen en publiceer direct via GitHub Pages.',
+    name: 'EisenVergelijk Lab',
+    description: 'Controleer vergelijkbare eisen en exporteer.',
     siteUrl: 'https://userdevtec.github.io/eisencheck-lab',
     image: eisencheckImage,
     accent: '#c1e62e',
