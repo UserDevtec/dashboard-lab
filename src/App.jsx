@@ -4,6 +4,8 @@ import afwijkingenImage from './assets/afwijkingen.png';
 import turtleImage from './assets/turtle.png';
 import logoImage from './assets/logo_tbi_en_tekst.png';
 import ifcViewerImage from './assets/ifcviewer.png';
+import mdrvergelijker from './assets/mdrvergelijker.png';
+
 import './App.css';
 
 const labs = [
@@ -47,7 +49,7 @@ const labs = [
     name: 'MDR Lab',
     description: 'MDR-omgeving voor validatie en dataverwerking.',
     siteUrl: 'https://userdevtec.github.io/mdr-lab',
-    image: logoImage,
+    image: mdrvergelijker,
     accent: '#630d80',
     status: 'Live',
     statusTone: 'live',
